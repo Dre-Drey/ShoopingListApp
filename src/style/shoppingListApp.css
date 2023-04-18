@@ -1,0 +1,25 @@
+.item-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-quantity {
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.item-quantity button {
+  margin: 4px;
+  padding: 8px;
+  color: black;
+  background-color: blanchedalmond;
+  border: none;
+}
+
+.item-quantity button:hover {
+  background-color: beige;
+  border: none;
+}
