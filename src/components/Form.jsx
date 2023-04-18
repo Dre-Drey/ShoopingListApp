@@ -4,16 +4,16 @@ import "../style/form.css";
 export default function Form({ onAddItem }) {
   const [inputText, setInputText] = useState(
     JSON.parse(localStorage.getItem("name")) || ""
-  );
+  ); //input text set to localstorage if available, else to empty string
 
   const [inputQuantity, setInputQuantity] = useState(
     JSON.parse(localStorage.getItem("quantity")) || 1
-  );
+  ); //same as input text
 
   useEffect(() => {
     localStorage.setItem("name", JSON.stringify(inputText));
     localStorage.setItem("quantity", JSON.stringify(inputQuantity));
-  }, [inputText, inputQuantity]);
+  }, [inputText, inputQuantity]); //for each modification of input text and input quantity, the name and the quantity are stored in localstorage
 
   return (
     <form
